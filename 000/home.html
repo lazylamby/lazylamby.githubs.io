@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Take One Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+    }
+
+    header {
+      background-color: #034C53;
+      padding: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #FFC1B4;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      background-color: #02636f;
+      border-radius: 5px;
+    }
+
+    .icon {
+      display: none;
+      font-size: 26px;
+      color: #FFC1B4;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.responsive .nav-links {
+        display: flex;
+      }
+
+      .icon {
+        display: block;
+      }
+    }
+
+    .top-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFC1B4;
+      padding: 25px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    .text-box {
+      flex: 1 1 35%;
+      padding: 15px;
+      background-color: #FFC1B4;
+      color: #000;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      margin: 0 0 20px;
+      font-size: 40px;
+      line-height: 1.4;
+      font-weight: bold;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 400px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+      color: #000;
+    }
+
+    th {
+      background-color: #034C53;
+      color: #fff;
+    }
+
+    .images {
+      flex: 1 1 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .image-box {
+      background-color: #fce4ec;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .image-box img {
+      width: 70%;
+      max-width: 300px;
+      height: auto;
+      border: 3px solid #034C53;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #034C53;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      .text-box, .images {
+        flex: 1 1 100%;
+      }
+
+      .images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .image-box {
+        width: 45%;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav id="navigation">
+      <span class="icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </span>
+      <div class="nav-links">
+        <a href="/home.html">Home</a>
+        <a href="/contact.html">Content</a>
+        <a href="/product.html">Product</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="top-message">
+    <strong>Take One Home</strong>
+  </div>
+
+  <main>
+    <div class="text-box">
+      <p>
+        A percentage of all donations and purchases will go to each of these supporting businesses:
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Business</th>
+              <th>Category</th>
+              <th>Monthly Sales ($)</th>
+              <th>Donation %</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Paws & Whiskers</td>
+              <td>Pet Supplies</td>
+              <td>12,300</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <td>Books & Beyond</td>
+              <td>Bookstore</td>
+              <td>8,450</td>
+              <td>8%</td>
+            </tr>
+            <tr>
+              <td>Green Eats Café</td>
+              <td>Organic Dining</td>
+              <td>15,900</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <td>Crafted Joy</td>
+              <td>Handmade Goods</td>
+              <td>7,700</td>
+              <td>27%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="images">
+      <div class="image-box">
+        <img src="/photo/images-1.jpeg" alt="donkey stuffy">
+      </div>
+      <div class="image-box">
+        <img src="/photo/images-2.jpeg" alt="fox stuffy ">
+      </div>
+      <div class="image-box">
+        <img src="/photo/Unknown-3.jpeg" alt="axo stuffy">
+      </div>
+      <div class="image-box">
+        <img src="/photo/Unknown.jpeg" alt="triceratops stuffy">
+      </div>
+      <div class="image-box">
+        <img src="/photo/images-5.jpeg" alt="cat stuffy">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; YOUFRIENDS INC</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.getElementById("navigation");
+      nav.classList.toggle("responsive");
+    }
+  </script>
+
+</body>
+</html>
